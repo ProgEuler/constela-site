@@ -6,6 +6,7 @@ import {
   ShieldCheck,
   Search,
   Lock,
+  Check,
 } from "lucide-react"
 
 export type NavItem = {
@@ -15,8 +16,8 @@ export type NavItem = {
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "Features", href: "#features" },
+  { label: "Pricing", href: "#pricing" },
   { label: "Preview", href: "#preview" },
-  { label: "Privacy & policies", href: "/privacy" },
 ]
 
 export const FOOTER_NAV: NavItem[] = [
@@ -127,6 +128,65 @@ export const FOOTER_GROUPS: FooterGroup[] = [
       { label: "Careers", href: "#" },
       { label: "Contact", href: "#" },
       { label: "Privacy", href: "/privacy" },
+    ],
+  },
+]
+
+export type PricingPlan = {
+  name: string
+  tagline: string
+  price: string
+  priceSuffix?: string
+  highlighted?: boolean
+  cta: { label: string; href: string }
+  features: string[]
+}
+
+export const PRICING_PLANS: PricingPlan[] = [
+  {
+    name: "Free",
+    tagline: "Everything you need to start meeting your people.",
+    price: "$0",
+    priceSuffix: "forever",
+    cta: { label: "Get started", href: "#" },
+    features: [
+      "Full sensory & compatibility profile",
+      "Daily Perfect Matches",
+      "Direct messages with read receipts",
+      "Friends mode or Romance mode",
+      "Community chat rooms",
+      "On-device face verification",
+    ],
+  },
+  {
+    name: "Plus",
+    tagline: "More reach, fewer limits, deeper filters.",
+    price: "$4.99",
+    priceSuffix: "per month",
+    highlighted: true,
+    cta: { label: "Start free trial", href: "#" },
+    features: [
+      "Everything in Free",
+      "See who liked you",
+      "Advanced filters (neurotype, lifestyle, languages)",
+      "Unlimited swipes & rewinds",
+      "Boost once a month",
+      "Read receipts control",
+    ],
+  },
+  {
+    name: "Premium",
+    tagline: "Maximum compatibility and full control.",
+    price: "$9.99",
+    priceSuffix: "per month",
+    cta: { label: "Start free trial", href: "#" },
+    features: [
+      "Everything in Plus",
+      "Top-5 daily compatibility scores",
+      "Priority placement in feeds",
+      "Profile visitors list",
+      "Incognito mode",
+      "Priority human support",
     ],
   },
 ]

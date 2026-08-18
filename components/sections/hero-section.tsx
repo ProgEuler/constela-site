@@ -17,10 +17,6 @@ export function HeroSection() {
       />
 
       <div className="mx-auto max-w-6xl px-6 pt-24 pb-20 text-center sm:pt-32">
-        <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-border bg-input/40 px-3 py-1 text-xs text-muted-foreground">
-          <Sparkles className="size-3 fill-primary text-primary" />
-          <span>Now in early access</span>
-        </div>
 
         <h1 className="mx-auto mt-6 max-w-3xl text-balance text-4xl font-semibold tracking-tight sm:text-6xl">
           Authentic connections for
@@ -37,9 +33,9 @@ export function HeroSection() {
 
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <GooglePlayButton size="lg" />
-          <Button size="lg" variant="outline" className="h-12 px-5 text-[15px]">
+          {/* <Button size="lg" variant="outline" className="h-12 px-5 text-[15px]">
             Learn more
-          </Button>
+          </Button> */}
         </div>
 
         <p className="mt-5 text-xs text-muted-foreground">

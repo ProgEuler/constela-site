@@ -14,7 +14,7 @@ const SIZE_CLASSES: Record<NonNullable<GooglePlayButtonProps["size"]>, string> =
   }
 
 export function GooglePlayButton({
-  href = "#",
+  href = "https://play.google.com/store/apps/details?id=com.constela.app",
   size = "default",
   className,
 }: GooglePlayButtonProps) {
