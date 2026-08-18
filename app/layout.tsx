@@ -18,6 +18,9 @@ const fontMono = Geist_Mono({
 export const metadata: Metadata = {
   title: APP_CONFIG.meta.title,
   description: APP_CONFIG.meta.description,
+  icons: {
+    icon: [{ url: "/logo.webp", type: "image/webp" }],
+  },
 }
 
 export default function RootLayout({

@@ -1,19 +1,25 @@
 import Link from "next/link"
 import { Menu } from "lucide-react"
 
-import { LogoMark } from "@/components/brand"
 import { Button } from "@/components/ui/button"
 import { GooglePlayButton } from "@/components/ui/google-play-button"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { APP_CONFIG } from "@/config/app-config"
 import { NAV_ITEMS } from "@/data/landing"
+import Image from "next/image"
 
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/70 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link href="/" className="flex items-center gap-2">
-          <LogoMark className="shadow-sm shadow-primary/30" />
+          <Image
+            src="/logo.webp"
+            alt={APP_CONFIG.name}
+            width={32}
+            height={32}
+            className="size-8 rounded-lg shadow-sm shadow-primary/30"
+          />
           <span className="font-semibold tracking-tight">
             {APP_CONFIG.name}
           </span>

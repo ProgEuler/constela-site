@@ -3,6 +3,7 @@ import Link from "next/link"
 import { LogoMark } from "@/components/brand"
 import { APP_CONFIG } from "@/config/app-config"
 import { FOOTER_GROUPS, FOOTER_NAV } from "@/data/landing"
+import Image from "next/image"
 
 export function SiteFooter() {
   return (
@@ -11,7 +12,13 @@ export function SiteFooter() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2">
-              <LogoMark />
+              <Image
+                src="/logo.webp"
+                alt={APP_CONFIG.name}
+                width={32}
+                height={32}
+                className="size-8 rounded-lg shadow-sm shadow-primary/30"
+              />
               <span className="font-semibold tracking-tight">
                 {APP_CONFIG.name}
               </span>
@@ -24,7 +31,7 @@ export function SiteFooter() {
 
           {FOOTER_GROUPS.map((group) => (
             <div key={group.title}>
-              <p className="text-xs font-semibold uppercase tracking-wider text-foreground">
+              <p className="text-xs font-semibold tracking-wider text-foreground uppercase">
                 {group.title}
               </p>
               <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
