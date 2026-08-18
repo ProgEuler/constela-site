@@ -23,21 +23,6 @@ export const metadata: Metadata = {
   },
 }
 
-const themeScript = `
-(function () {
-  try {
-    var stored = localStorage.getItem("constela-theme");
-    var theme = stored || "light";
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-    document.documentElement.style.colorScheme = theme;
-  } catch (_) {}
-})();
-`
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -54,11 +39,6 @@ export default function RootLayout({
         dmSans.variable
       )}
     >
-      <head>
-        <script
-          dangerouslySetInnerHTML={{ __html: themeScript }}
-        />
-      </head>
       <body>
         <ThemeProvider>
           <ThemeHotkey />

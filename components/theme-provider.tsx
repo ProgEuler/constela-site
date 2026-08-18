@@ -11,6 +11,7 @@ function ThemeProvider({
     <NextThemesProvider
       attribute="class"
       defaultTheme="light"
+      enableSystem={false}
       storageKey="constela-theme"
       disableTransitionOnChange
       {...props}

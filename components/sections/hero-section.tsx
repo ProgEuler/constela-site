@@ -1,18 +1,15 @@
-import { Sparkles } from "lucide-react"
-
-import { Button } from "@/components/ui/button"
 import { GooglePlayButton } from "@/components/ui/google-play-button"
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden isolate">
       <div className="absolute inset-0 -z-10 landing-grid-bg" aria-hidden />
       <div
-        className="glow-orb -left-32 top-10 size-[420px] bg-primary"
+        className="glow-orb -left-16 top-2 size-[220px] bg-primary sm:-left-32 sm:top-10 sm:size-[420px]"
         aria-hidden
       />
       <div
-        className="glow-orb -right-32 top-40 size-[360px] bg-chart-3"
+        className="glow-orb -right-16 bottom-0 size-[200px] bg-chart-3 sm:-right-32 sm:top-40 sm:bottom-auto sm:size-[360px]"
         aria-hidden
       />
 
@@ -33,9 +30,6 @@ export function HeroSection() {
 
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <GooglePlayButton size="lg" />
-          {/* <Button size="lg" variant="outline" className="h-12 px-5 text-[15px]">
-            Learn more
-          </Button> */}
         </div>
 
         <p className="mt-5 text-xs text-muted-foreground">

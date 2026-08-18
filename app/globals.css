@@ -195,8 +195,15 @@
   .glow-orb {
     position: absolute;
     border-radius: 9999px;
-    filter: blur(80px);
-    opacity: 0.45;
+    filter: blur(40px);
+    opacity: 0.35;
     pointer-events: none;
+  }
+
+  @media (min-width: 640px) {
+    .glow-orb {
+      filter: blur(80px);
+      opacity: 0.45;
+    }
   }
 }
