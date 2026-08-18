@@ -16,8 +16,7 @@ export type NavItem = {
 export const NAV_ITEMS: NavItem[] = [
   { label: "Features", href: "#features" },
   { label: "Preview", href: "#preview" },
-  { label: "Safety", href: "#safety" },
-  { label: "Community", href: "#community" },
+  { label: "Privacy & policies", href: "/privacy" },
 ]
 
 export const FOOTER_NAV: NavItem[] = [
