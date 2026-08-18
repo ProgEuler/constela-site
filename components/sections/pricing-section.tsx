@@ -1,6 +1,7 @@
-import { Check } from "lucide-react"
+import { Tick01Icon } from "@hugeicons/core-free-icons"
 
 import { Button } from "@/components/ui/button"
+import { Icon } from "@/components/ui/icon"
 import { PRICING_PLANS, type PricingPlan } from "@/data/landing"
 import { cn } from "@/lib/utils"
 
@@ -58,7 +59,7 @@ function PricingCard({ plan }: { plan: PricingPlan }) {
                   : "bg-muted text-muted-foreground"
               )}
             >
-              <Check className="size-3" />
+              <Icon icon={Tick01Icon} className="size-3" />
             </span>
             <span className="text-foreground/90">{feature}</span>
           </li>

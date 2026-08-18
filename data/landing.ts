@@ -1,13 +1,12 @@
-import type { LucideIcon } from "lucide-react"
 import {
-  Sparkles,
-  MessagesSquare,
-  Users,
-  ShieldCheck,
-  Search,
-  Lock,
-  Check,
-} from "lucide-react"
+  SparklesIcon,
+  ConversationIcon,
+  UserGroupIcon,
+  SecurityIcon,
+  Search01Icon,
+  LockIcon,
+} from "@hugeicons/core-free-icons"
+import type { IconSvgElement } from "@hugeicons/react"
 
 export type NavItem = {
   label: string
@@ -28,7 +27,7 @@ export const FOOTER_NAV: NavItem[] = [
 export type Feature = {
   title: string
   description: string
-  icon: LucideIcon
+  icon: IconSvgElement
 }
 
 export const FEATURES: Feature[] = [
@@ -36,37 +35,37 @@ export const FEATURES: Feature[] = [
     title: "Match on what really matters",
     description:
       "Our 7-step onboarding captures a rich, multi-dimensional profile — sensory preferences, emotional triggers, lifestyle, and interests — so you meet people who genuinely fit how you live and love.",
-    icon: Sparkles,
+    icon: SparklesIcon,
   },
   {
     title: "Real conversations, in real time",
     description:
       "Direct messages with typing indicators, emoji reactions, image sharing, and reply threads. Join community chat rooms to talk about what you care about with people who get it.",
-    icon: MessagesSquare,
+    icon: ConversationIcon,
   },
   {
     title: "Friendship, not just romance",
     description:
       "Switch to Friends mode to meet people who share your wavelength — for shared activities, deep talks, or just understanding. No romance required.",
-    icon: Users,
+    icon: UserGroupIcon,
   },
   {
     title: "Verified faces, real people",
     description:
       "Optional 3-angle face verification powered by on-device ML deters catfishing and impersonation — so you know the person behind the profile is real.",
-    icon: ShieldCheck,
+    icon: SecurityIcon,
   },
   {
     title: "Powerful discovery",
     description:
       "Swipe deck for daily Perfect Matches, advanced filters (age, languages, neurotype, lifestyle, emotional profile), and top-5 compatibility scores on Premium.",
-    icon: Search,
+    icon: Search01Icon,
   },
   {
     title: "Built with privacy in mind",
     description:
       "Encrypted token storage, on-device biometric processing, full GDPR rights, and zero selling of personal data. Special-category data only with your explicit consent.",
-    icon: Lock,
+    icon: LockIcon,
   },
 ]
 

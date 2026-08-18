@@ -3,10 +3,11 @@
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X } from "lucide-react"
+import { Cancel01Icon, Menu01Icon } from "@hugeicons/core-free-icons"
 
 import { Button } from "@/components/ui/button"
 import { GooglePlayButton } from "@/components/ui/google-play-button"
+import { Icon } from "@/components/ui/icon"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { APP_CONFIG } from "@/config/app-config"
 import { NAV_ITEMS } from "@/data/landing"
@@ -79,7 +80,11 @@ export function SiteHeader() {
             aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? <X /> : <Menu />}
+            {open ? (
+              <Icon icon={Cancel01Icon} className="size-5" />
+            ) : (
+              <Icon icon={Menu01Icon} className="size-5" />
+            )}
           </Button>
         </div>
       </div>

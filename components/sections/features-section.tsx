@@ -1,3 +1,4 @@
+import { Icon } from "@/components/ui/icon"
 import { FEATURES } from "@/data/landing"
 
 export function FeaturesSection() {
@@ -19,25 +20,22 @@ export function FeaturesSection() {
         </div>
 
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURES.map((feature) => {
-            const Icon = feature.icon
-            return (
-              <div
-                key={feature.title}
-                className="group rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
-              >
-                <div className="flex size-10 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                  <Icon className="size-5" />
-                </div>
-                <h3 className="mt-5 text-base font-semibold">
-                  {feature.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {feature.description}
-                </p>
+          {FEATURES.map((feature) => (
+            <div
+              key={feature.title}
+              className="group rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
+            >
+              <div className="flex size-10 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                <Icon icon={feature.icon} className="size-5" />
               </div>
-            )
-          })}
+              <h3 className="mt-5 text-base font-semibold">
+                {feature.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {feature.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,4 +1,6 @@
-import { ImageIcon } from "lucide-react"
+import { Image01Icon } from "@hugeicons/core-free-icons"
+
+import { Icon } from "@/components/ui/icon"
 
 export function ScreenshotsSection() {
   return (
@@ -28,7 +30,7 @@ export function ScreenshotsSection() {
             <div className="phone-screen">
               <div className="flex h-full w-full flex-col items-center justify-center gap-3 text-muted-foreground">
                 <div className="flex size-14 items-center justify-center rounded-2xl border border-dashed border-border bg-background">
-                  <ImageIcon className="size-6" />
+                  <Icon icon={Image01Icon} className="size-6" />
                 </div>
                 <p className="text-sm font-medium">App screenshot</p>
                 <p className="px-8 text-center text-xs text-muted-foreground/80">
