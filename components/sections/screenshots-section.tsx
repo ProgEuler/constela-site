@@ -1,6 +1,23 @@
-import { Image01Icon } from "@hugeicons/core-free-icons"
+import Image from "next/image"
 
-import { Icon } from "@/components/ui/icon"
+const SCREENSHOTS = [
+  {
+    src: "/screenshots/Screenshot_1787086277.png",
+    alt: "Constela app — match discovery screen",
+  },
+  {
+    src: "/screenshots/Screenshot_1787086358.png",
+    alt: "Constela app — profile detail screen",
+  },
+  {
+    src: "/screenshots/Screenshot_1787086362.png",
+    alt: "Constela app — conversation screen",
+  },
+  {
+    src: "/screenshots/Screenshot_1787086374.png",
+    alt: "Constela app — sensory preferences screen",
+  },
+] as const
 
 export function ScreenshotsSection() {
   return (
@@ -25,20 +42,25 @@ export function ScreenshotsSection() {
           </p>
         </div>
 
-        <div className="mt-16 flex justify-center">
-          <div className="phone-frame w-[280px] sm:w-[320px]">
-            <div className="phone-screen">
-              <div className="flex h-full w-full flex-col items-center justify-center gap-3 text-muted-foreground">
-                <div className="flex size-14 items-center justify-center rounded-2xl border border-dashed border-border bg-background">
-                  <Icon icon={Image01Icon} className="size-6" />
+        <div className="mt-16">
+          <div className="mx-auto flex w-fit max-w-full flex-wrap items-start justify-center gap-6 sm:gap-8">
+            {SCREENSHOTS.map((shot) => (
+              <div
+                key={shot.src}
+                className="phone-frame w-[180px] sm:w-[220px] md:w-[240px]"
+              >
+                <div className="phone-screen">
+                  <Image
+                    src={shot.src}
+                    alt={shot.alt}
+                    width={1080}
+                    height={2424}
+                    className="h-full w-full object-cover"
+                    sizes="(min-width: 768px) 240px, (min-width: 640px) 220px, 180px"
+                  />
                 </div>
-                <p className="text-sm font-medium">App screenshot</p>
-                <p className="px-8 text-center text-xs text-muted-foreground/80">
-                  Drop your mobile app screenshot here. Recommended 1170×2532
-                  (iPhone Pro).
-                </p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
