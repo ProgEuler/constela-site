@@ -49,7 +49,7 @@ export function ScreenshotsSection() {
                 key={shot.src}
                 className="phone-frame w-[180px] sm:w-[220px] md:w-[240px]"
               >
-                <div className="phone-screen">
+                <div className="phone-screen py-2 bg-white">
                   <Image
                     src={shot.src}
                     alt={shot.alt}
